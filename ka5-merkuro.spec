@@ -42,9 +42,9 @@ BuildRequires:	kf5-kdbusaddons-devel >= 5.96.0
 BuildRequires:	kf5-ki18n-devel >= 5.109.0
 BuildRequires:	kf5-kiconthemes >= 5.96.0
 BuildRequires:	kf5-kirigami2-devel >= 5.96.0
+BuildRequires:	kf5-kirigami-addons-devel >= 0.7.2
 BuildRequires:	kf5-kitemmodels-devel >= 5.105.0
 BuildRequires:	kf5-qqc2-desktop-style-devel >= 5.96.0
-BuildRequires:	kirigami-addons-devel >= 0.7.2
 BuildRequires:	ninja
 BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.164
