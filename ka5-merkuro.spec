@@ -1,11 +1,13 @@
 #
 # Conditional build:
-%bcond_with	tests		# build with tests
+%bcond_with	tests		# test suite
+
 %define		kdeappsver	23.08.5
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		merkuro
 Summary:	Kalendar
+Summary(pl.UTF-8):	Kalendarz
 Name:		ka5-%{kaname}
 Version:	23.08.5
 Release:	1
@@ -13,7 +15,7 @@ License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	0c34fafc556e25462acb3fdbe89d75aa
-URL:		http://www.kde.org/
+URL:		https://www.kde.org/
 BuildRequires:	Qt5Core-devel >= 5.15.2
 BuildRequires:	Qt5DBus-devel >= 5.15.2
 BuildRequires:	Qt5Gui-devel
@@ -59,6 +61,12 @@ that uses Akonadi. It lets you add, edit and delete events and tasks
 from local and remote accounts of your choice, while keeping changes
 synchronised across your Plasma desktop or phone.
 
+%description -l pl.UTF-8
+Merkuro to oparty na Kirigami kalendarz i aplikacja do zarządzania
+zadaniami, wykorzystująca Akonadi. Pozwala dodawać, modyfikować i
+usuwać wydarzenia i zadania z wybranych lokalnych i zdalnych kont,
+pilnując synchronizacji z pulpitem Plazmy lub telefonem.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
@@ -68,15 +76,16 @@ synchronised across your Plasma desktop or phone.
 	%{!?with_tests:-DBUILD_TESTING=OFF} \
 	-DHTML_INSTALL_DIR=%{_kdedocdir} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+
 %ninja_build -C build
 
 %if %{with tests}
 ctest --test-dir build
 %endif
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %ninja_install -C build
 
 %find_lang %{kaname} --all-name --with-kde
