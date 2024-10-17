@@ -98,88 +98,43 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/merkuro-calendar
 %attr(755,root,root) %{_bindir}/merkuro-contact
 %attr(755,root,root) %{_bindir}/merkuro-mail
+# merkuro seems to be the only user of %{_libdir}/qt5/qml/org/kde/akonadi, move dir here? (from ka5-akonadi)
 %{_libdir}/qt5/qml/org/kde/akonadi/AgentConfigurationForm.qml
 %{_libdir}/qt5/qml/org/kde/akonadi/CollectionComboBox.qml
 %{_libdir}/qt5/qml/org/kde/akonadi/IdentityConfigurationForm.qml
 %{_libdir}/qt5/qml/org/kde/akonadi/MobileCollectionComboBox.qml
 %{_libdir}/qt5/qml/org/kde/akonadi/TagManagerPage.qml
-%{_libdir}/qt5/qml/org/kde/akonadi/libakonadi_quick_plugin.so
+%attr(755,root,root) %{_libdir}/qt5/qml/org/kde/akonadi/libakonadi_quick_plugin.so
 %{_libdir}/qt5/qml/org/kde/akonadi/qmldir
 %dir %{_libdir}/qt5/qml/org/kde/merkuro
 %dir %{_libdir}/qt5/qml/org/kde/merkuro/calendar
-%{_libdir}/qt5/qml/org/kde/merkuro/calendar/BottomToolBar.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/calendar/PriorityComboBox.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/calendar/ReminderDelegate.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/calendar/libmerkuro_calendar_plugin.so
+%attr(755,root,root) %{_libdir}/qt5/qml/org/kde/merkuro/calendar/libmerkuro_calendar_plugin.so
+%{_libdir}/qt5/qml/org/kde/merkuro/calendar/*.qml
 %{_libdir}/qt5/qml/org/kde/merkuro/calendar/qmldir
 %dir %{_libdir}/qt5/qml/org/kde/merkuro/components
-%{_libdir}/qt5/qml/org/kde/merkuro/components/BaseApplication.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/ColoredCheckbox.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/EditMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/FileMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/HelpMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/KActionFromAction.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/KQuickCommandBarPage.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/NativeEditMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/NativeFileMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/NativeHelpMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/NativeMenuItemFromAction.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/NativeWindowMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/SettingsMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/ViewMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/WindowMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/components/libmerkuro_components_plugin.so
+%attr(755,root,root) %{_libdir}/qt5/qml/org/kde/merkuro/components/libmerkuro_components_plugin.so
+%{_libdir}/qt5/qml/org/kde/merkuro/components/*.qml
 %{_libdir}/qt5/qml/org/kde/merkuro/components/qmldir
 %dir %{_libdir}/qt5/qml/org/kde/merkuro/contact
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/AddressBookCollectionHandler.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/ContactChooserPage.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/ContactView.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/GlobalMenuBar.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/MenuBar.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/Sidebar.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/libmerkuro_contact_plugin.so
-%dir %{_libdir}/qt5/qml/org/kde/merkuro/contact/private
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/AddressBookMenu.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/ContactGroupPage.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/ContactListItem.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/ContactPage.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/ContactsPage.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/DeleteContactAction.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/Header.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/PhoneNumberDialog.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/QrCodePage.qml
-%dir %{_libdir}/qt5/qml/org/kde/merkuro/contact/private/contact_editor
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/contact_editor/AddressBookEditorCard.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/contact_editor/BusinessEditorCard.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/contact_editor/ContactEditorPage.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/contact_editor/ContactGroupEditorPage.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/contact_editor/EmailEditorCard.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/contact_editor/InstantMessengerEditorCard.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/contact_editor/PersonalInfoEditorCard.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/contact_editor/PhoneEditorCard.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/contact/private/contact_editor/PhotoEditor.qml
+%{_libdir}/qt5/qml/org/kde/merkuro/contact/private
+%attr(755,root,root) %{_libdir}/qt5/qml/org/kde/merkuro/contact/libmerkuro_contact_plugin.so
+%{_libdir}/qt5/qml/org/kde/merkuro/contact/*.qml
 %{_libdir}/qt5/qml/org/kde/merkuro/contact/qmldir
 %dir %{_libdir}/qt5/qml/org/kde/merkuro/mail
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/ConversationViewer.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/FolderView.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/MailComposer.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/MailSidebar.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/MailViewer.qml
+%{_libdir}/qt5/qml/org/kde/merkuro/mail/mailboxselector
+%{_libdir}/qt5/qml/org/kde/merkuro/mail/mailpartview
+%{_libdir}/qt5/qml/org/kde/merkuro/mail/private
 %attr(755,root,root) %{_libdir}/qt5/qml/org/kde/merkuro/mail/libmerkuro_mail_plugin.so
-%dir %{_libdir}/qt5/qml/org/kde/merkuro/mail/mailboxselector
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/mailboxselector/MailBoxList.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/mailboxselector/MailBoxListPage.qml
-%dir %{_libdir}/qt5/qml/org/kde/merkuro/mail/mailpartview
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/mailpartview/HtmlPart.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/mailpartview/ICalPart.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/mailpartview/MailPart.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/mailpartview/MailPartModel.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/mailpartview/MailPartView.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/mailpartview/TextPart.qml
-%dir %{_libdir}/qt5/qml/org/kde/merkuro/mail/private
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/private/AttachmentDelegate.qml
-%{_libdir}/qt5/qml/org/kde/merkuro/mail/private/MailDelegate.qml
+%{_libdir}/qt5/qml/org/kde/merkuro/mail/*.qml
 %{_libdir}/qt5/qml/org/kde/merkuro/mail/qmldir
+%{_datadir}/metainfo/org.kde.merkuro.calendar.metainfo.xml
+%{_datadir}/metainfo/org.kde.merkuro.contact.appdata.xml
+%{_datadir}/metainfo/org.kde.merkuro.contact.metainfo.xml
+%{_datadir}/metainfo/org.kde.merkuro.mail.metainfo.xml
+%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact
+%{_datadir}/qlogging-categories5/akonadi.quick.categories
+%{_datadir}/qlogging-categories5/merkuro.categories
+%{_datadir}/qlogging-categories5/merkuro.contact.categories
 %{_desktopdir}/org.kde.merkuro.calendar.desktop
 %{_desktopdir}/org.kde.merkuro.contact.desktop
 %{_desktopdir}/org.kde.merkuro.mail.desktop
@@ -192,26 +147,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/48x48/apps/org.kde.merkuro.calendar.png
 %{_iconsdir}/hicolor/48x48/apps/org.kde.merkuro.contact.png
 %{_iconsdir}/hicolor/48x48/apps/org.kde.merkuro.mail.png
-%{_datadir}/metainfo/org.kde.merkuro.calendar.metainfo.xml
-%{_datadir}/metainfo/org.kde.merkuro.contact.appdata.xml
-%{_datadir}/metainfo/org.kde.merkuro.contact.metainfo.xml
-%{_datadir}/metainfo/org.kde.merkuro.mail.metainfo.xml
-%dir %{_datadir}/plasma/plasmoids/org.kde.merkuro.contact
-%dir %{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents
-%dir %{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/config
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/config/main.xml
-%dir %{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/resources
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/resources/fallbackBackground.png
-%dir %{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/ui
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/ui/CompactRepresentation.qml
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/ui/ContactListItem.qml
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/ui/ContactPage.qml
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/ui/ContactsPage.qml
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/ui/Header.qml
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/ui/QrCodePage.qml
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/contents/ui/main.qml
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/metadata.json
-%{_datadir}/plasma/plasmoids/org.kde.merkuro.contact/metadata.json.license
-%{_datadir}/qlogging-categories5/akonadi.quick.categories
-%{_datadir}/qlogging-categories5/merkuro.categories
-%{_datadir}/qlogging-categories5/merkuro.contact.categories
