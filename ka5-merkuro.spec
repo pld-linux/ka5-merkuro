@@ -49,7 +49,7 @@ BuildRequires:	kf5-kitemmodels-devel >= 5.105.0
 BuildRequires:	kf5-qqc2-desktop-style-devel >= 5.96.0
 BuildRequires:	ninja
 BuildRequires:	qt5-build >= %{qtver}
-BuildRequires:	rpmbuild(macros) >= 1.164
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
