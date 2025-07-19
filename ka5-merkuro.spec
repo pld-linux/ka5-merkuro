@@ -28,8 +28,7 @@ BuildRequires:	Qt5Test-devel
 BuildRequires:	Qt5Widgets-devel >= 5.15.2
 BuildRequires:	cmake >= 3.20
 BuildRequires:	gettext-devel
-BuildRequires:	gpgme-c++-devel
-BuildRequires:	gpgme-qt5-devel
+BuildRequires:	gpgmepp-devel
 BuildRequires:	ka5-akonadi-calendar-devel >= %{kdeappsver}
 BuildRequires:	ka5-akonadi-contacts-devel >= %{kdeappsver}
 BuildRequires:	ka5-akonadi-devel >= %{kdeappsver}
@@ -48,6 +47,7 @@ BuildRequires:	kf5-kirigami-addons-devel >= 0.7.2
 BuildRequires:	kf5-kitemmodels-devel >= 5.105.0
 BuildRequires:	kf5-qqc2-desktop-style-devel >= 5.96.0
 BuildRequires:	ninja
+BuildRequires:	qgpgme-qt5-devel
 BuildRequires:	qt5-build >= %{qtver}
 BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	shared-mime-info
