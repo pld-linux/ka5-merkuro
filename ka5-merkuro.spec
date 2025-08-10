@@ -10,7 +10,7 @@ Summary:	Kalendar
 Summary(pl.UTF-8):	Kalendarz
 Name:		ka5-%{kaname}
 Version:	23.08.5
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -35,6 +35,7 @@ BuildRequires:	ka5-akonadi-devel >= %{kdeappsver}
 BuildRequires:	ka5-akonadi-mime-devel >= %{kdeappsver}
 BuildRequires:	ka5-kcalutils-devel >= %{kdeappsver}
 BuildRequires:	ka5-kidentitymanagement-devel >= %{kdeappsver}
+BuildRequires:	ka5-mailcommon-devel >= %{kdeappsver}
 BuildRequires:	ka5-pimcommon-devel >= %{kdeappsver}
 BuildRequires:	kf5-extra-cmake-modules >= 5.96.0
 BuildRequires:	kf5-kcalendarcore-devel >= 5.105.0
@@ -42,9 +43,10 @@ BuildRequires:	kf5-kcontacts-devel >= 5.105.0
 BuildRequires:	kf5-kdbusaddons-devel >= 5.96.0
 BuildRequires:	kf5-ki18n-devel >= 5.109.0
 BuildRequires:	kf5-kiconthemes >= 5.96.0
-BuildRequires:	kf5-kirigami2-devel >= 5.96.0
 BuildRequires:	kf5-kirigami-addons-devel >= 0.7.2
+BuildRequires:	kf5-kirigami2-devel >= 5.96.0
 BuildRequires:	kf5-kitemmodels-devel >= 5.105.0
+BuildRequires:	kf5-plasma-framework-devel >= 5.96.0
 BuildRequires:	kf5-qqc2-desktop-style-devel >= 5.96.0
 BuildRequires:	ninja
 BuildRequires:	qgpgme-qt5-devel
